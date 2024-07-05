@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>myBillBook</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <aside>
+        <div class="logo">
+            <div class="logo_icon">
+                <!-- <img src="assets/images/graduate.png" alt=""> -->
+                <img src="D:\PROJECTS\bill-book\logo.webp" alt="">
+            </div>
+            <a href="#" class="ms-1">
+                <h6 class="m-0">TechnoSphere Tec...</h6>
+                <span>7251808001</span>
+            </a>
+        </div>
+
+        <div class="create_sales d-flex mt-2">
+            <p class="m-0">
+                <i class="fa-solid fa-plus"></i>
+                Create Sales Invoice
+            </p>
+            <i class="fa-solid fa-angle-down down"></i>
+        </div>
+
+
+        <ul class="main_links ps-0 pt-3">
+            <li>
+                <h6>GENERAL</h6>
+                <ul class="child_links">
+                    <li>
+                        <a href="dashboard.html" id="dashboard"><i class='bx bxs-dashboard'></i>Dashboard</a>
+                    </li>
+                    <li class="active">
+                        <a href="parties.html" class="" id="parties"><i class="bi bi-people"></i>Parties</a>
+                    </li>
+                    <li>
+                        <a href="due-payment.html" id="due_payment"><i class="bi bi-credit-card-2-front"></i>Due
+                            Payment</a>
+                    </li>
+                    <li>
+                        <a href="inventory.html" id="inventory"><i class="bi bi-box-seam-fill"></i>Inventory</a>
+                    </li>
+                    <!-- <li>
+                        <a href="#" id="items"><i class="bi bi-box-seam"></i>Items
+                            <i class="fa-solid fa-angle-right"></i></a>
+                    </li> -->
+                    <li>
+                        <a href="#" id="sales"><i class="bi bi-tag"></i>Sales
+                            <i class="fa-solid fa-angle-right"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" id="purchases"><i class="bi bi-handbag"></i>Purchases
+                            <i class="fa-solid fa-angle-right"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" id="reports"><i class="bi bi-file-earmark-bar-graph"></i>Reports</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="mt-3">
+                <h6>ACCOUNTING SOLUTIONS</h6>
+                <ul class="child_links">
+                    <li>
+                        <a href="#" id="cashnbank"><i class="bi bi-bank"></i>Cash & Bank</a>
+                    </li>
+                    <li>
+                        <a href="#" id="e_invoicing"><i class="bi bi-file-earmark"></i>E-invoicing</a>
+                    </li>
+                    <li>
+                        <!-- <a href="#" id="items"><i class="fa-solid fa-file-circle-check"></i>Automated Bills</a> -->
+                    </li>
+                    <li>
+                        <a href="#" id="sales"><i class="bi bi-receipt"></i>Expenses</a>
+                    </li>
+                </ul>
+            </li>
+
+
+            <li class="mt-3">
+                <h6>BUSINESS TOOLS</h6>
+                <ul class="child_links">
+                    <li>
+                        <a href="#" id="online_store"><i class="bi bi-cart"></i>Online Store</a>
+                    </li>
+                    <li>
+                        <a href="#" id="expenses"><i class="bi bi-receipt"></i>Expenses</a>
+                    </li>
+                    <li>
+                        <a href="#" id="purchases"><i class="fa-solid fa-file-circle-check"></i>Purchases</a>
+                    </li>
+                    <li>
+                        <a href="#" id="expenses"><i class="bi bi-receipt"></i>Expenses</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="sidebar_bottom">
+            <div class="scroll_options">
+                <span>Scroll for more options <i class="fa-solid fa-arrow-down ps-2"></i></span>
+            </div>
+            <ul class="child_links">
+                <li>
+                    <a href="#" id="settings"><i class="fa-solid fa-gear me-2"></i>Settings</a>
+                </li>
+            </ul>
+            <div class="side_end">
+                <span><i class="bi bi-shield-check"></i>100% Secure</span>
+                <span>ISO Certified</span>
+            </div>
+        </div>
+
+    </aside>
+
+    <div class="main_content">
+
+        <!-- ============================================= PENDING ACTIONS ============================================= -->
+
+        <div class="pending_actions">
+            <button type="button" class="btn btn-primary position-relative">
+                <i class="bi bi-layers"></i>
+                Pending Actions
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    1
+                    <span class="visually-hidden">unread messages</span>
+                </span>
+            </button>
+        </div>
+
+        <!-- ============================================= HEADER ============================================= -->
+
+        <header>
+            <div class="top_head sections">
+                <div class="main_head">
+                    <h6>Parties</h6>
+                </div>
+                <div class="reports_keyboard">
+                    <div class="category_menu">
+                        <i class="bi bi-file-earmark-bar-graph"></i>
+                        <select name="reports" id="" class="keyboard_btn reports_btn">
+                            <option value="">Reports</option>
+                            <option value="">name 1</option>
+                            <option value="">name 1</option>
+                            <option value="">name 1</option>
+                            <option value="">name 1</option>
+                            <option value="">name 1</option>
+                        </select>
+                    </div>
+                    <div class="keyboard_btn">
+                        <i class="fa-solid fa-keyboard"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ============================================= REFERRAL ============================================= -->
+
+        <div class="referrals sections">
+            <div class="earn_referral">
+                <div class="gift_icon btn btn-primary">
+                    <i class="fa-solid fa-gift"></i>
+                </div>
+                <div class="referral_info">
+                    <h6>Earn <i class="fa-solid fa-indian-rupee-sign"></i>501/- for each Referral</h6>
+                    <p>You gain <i class="fa-solid fa-indian-rupee-sign"></i>501 per referral, while they enjoy 15% off
+                        any premium plan purchase.</p>
+                </div>
+            </div>
+            <div class="refer_now">
+                <button class="refer_now_btn">
+                    Refer Now
+                </button>
+                <i class="fa-solid fa-x referral_close"></i>
+            </div>
+        </div>
+
+        <!-- ============================================= COLLECT AND PAY ============================================= -->
+
+        <div class="collect_pay parties_collectPay sections">
+            <div class="row">
+                <div class="col-lg col-md-6">
+                    <div class="amount_blocks parties_blocks">
+                        <div class="amount_heads">
+                            <i class="bi bi-people"></i>
+                            <span>All Parties</span>
+                        </div>
+
+                        <h4>47</h4>
+                    </div>
+                </div>
+                <div class="col-lg col-md-6">
+                    <div class="amount_blocks parties_blocks to_collect">
+                        <div class="amount_heads">
+                            <i class="bi bi-currency-rupee"></i>
+                            <span>Total Amount</span>
+                        </div>
+
+                        <h4><i class="bi bi-currency-rupee"></i>7,03,750</h4>
+                    </div>
+                </div>
+                <div class="col-lg col-md-6">
+                    <div class="amount_blocks parties_blocks to_pay">
+                        <div class="amount_heads">
+                            <i class="bi bi-currency-rupee"></i>
+                            <span>Balance Due</span>
+                        </div>
+
+                        <h4><i class="bi bi-currency-rupee"></i>0</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================= PARTIES ============================================= -->
+
+
+        <div class="create_party_main sections">
+            <div class="search_select">
+                <div class="keyboard_btn">
+                    <i class="fa-solid fa-search"></i>
+                </div>
+                <select name="" id="" class="keyboard_btn">
+                    <option value="">Select Categories</option>
+                    <option value="">Category 1</option>
+                    <option value="">Category 2</option>
+                    <option value="">Category 3</option>
+                    <option value="">Category 4</option>
+                </select>
+            </div>
+
+            <div class="create_party">
+                <div class="bulk_create">
+                    <i class="bi bi-layers"></i>
+                    <select name="reports" id="" class="keyboard_btn bulk_action">
+                        <option value="">Bulk Action</option>
+                        <option value="">name 1</option>
+                        <option value="">name 1</option>
+                        <option value="">name 1</option>
+                        <option value="">name 1</option>
+                        <option value="">name 1</option>
+                    </select>
+                    <div class="create_party_btn">
+                        <a href="create-party.html"><button class="blue_btn btn">Create Party</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================= TABULAR DATA ============================================= -->
+
+        <section class="parties_tabular_data sections">
+            <table border="1">
+                <tr class="card-header">
+                    <th>Party Name</th>
+                    <th>Category</th>
+                    <th>Mobile Number</th>
+                    <th>Party type</th>
+                    <th>Balance</th>
+                </tr>
+                <tr class="card-body">
+                    <td>ABHISHEK THAKUR</td>
+                    <td>Students</td>
+                    <td>7252892967</td>
+                    <td>Customer</td>
+                    <td>
+                        <i class="fa-solid fa-arrow-down"></i>
+                        <i class="bi bi-currency-rupee"></i>
+                        20,000
+                    </td>
+                </tr>
+                <tr class="card-body">
+                    <td>ADITYA CHAUDHARY</td>
+                    <td>Students</td>
+                    <td>9027774243</td>
+                    <td>Customer</td>
+                    <td>
+                        <i class="fa-solid fa-arrow-down"></i>
+                        <i class="bi bi-currency-rupee"></i>
+                        12,000
+                    </td>
+                </tr>
+                <tr class="card-body">
+                    <td>AJEET SINGH</td>
+                    <td>Students</td>
+                    <td>7464929646</td>
+                    <td>Customer</td>
+                    <td>
+                        <i class="fa-solid fa-arrow-down"></i>
+                        <i class="bi bi-currency-rupee"></i>
+                        6,500
+                    </td>
+                </tr>
+                <tr class="card-body">
+                    <td>AJEET SINGH</td>
+                    <td>Students</td>
+                    <td>7464929646</td>
+                    <td>Customer</td>
+                    <td>
+                        <i class="fa-solid fa-arrow-down"></i>
+                        <i class="bi bi-currency-rupee"></i>
+                        6,500
+                    </td>
+                </tr>
+                <tr class="card-body">
+                    <td>AJEET SINGH</td>
+                    <td>Students</td>
+                    <td>7464929646</td>
+                    <td>Customer</td>
+                    <td>
+                        <i class="fa-solid fa-arrow-down"></i>
+                        <i class="bi bi-currency-rupee"></i>
+                        6,500
+                    </td>
+                </tr>
+                <tr class="card-body">
+                    <td>AJEET SINGH</td>
+                    <td>Students</td>
+                    <td>7464929646</td>
+                    <td>Customer</td>
+                    <td>
+                        <i class="fa-solid fa-arrow-down"></i>
+                        <i class="bi bi-currency-rupee"></i>
+                        6,500
+                    </td>
+                </tr>
+                <tr class="card-body">
+                    <td>AJEET SINGH</td>
+                    <td>Students</td>
+                    <td>7464929646</td>
+                    <td>Customer</td>
+                    <td>
+                        <i class="fa-solid fa-arrow-down"></i>
+                        <i class="bi bi-currency-rupee"></i>
+                        6,500
+                    </td>
+                </tr>
+                <tr class="card-body">
+                    <td>AJEET SINGH</td>
+                    <td>Students</td>
+                    <td>7464929646</td>
+                    <td>Customer</td>
+                    <td>
+                        <i class="fa-solid fa-arrow-down"></i>
+                        <i class="bi bi-currency-rupee"></i>
+                        6,500
+                    </td>
+                </tr>
+                <tr class="card-body">
+                    <td>AJEET SINGH</td>
+                    <td>Students</td>
+                    <td>7464929646</td>
+                    <td>Customer</td>
+                    <td>
+                        <i class="fa-solid fa-arrow-down"></i>
+                        <i class="bi bi-currency-rupee"></i>
+                        6,500
+                    </td>
+                </tr>
+                <tr class="card-body">
+                    <td>AJEET SINGH</td>
+                    <td>Students</td>
+                    <td>7464929646</td>
+                    <td>Customer</td>
+                    <td>
+                        <i class="fa-solid fa-arrow-down"></i>
+                        <i class="bi bi-currency-rupee"></i>
+                        6,500
+                    </td>
+                </tr>
+                <tr class="card-body">
+                    <td>AJEET SINGH</td>
+                    <td>Students</td>
+                    <td>7464929646</td>
+                    <td>Customer</td>
+                    <td>
+                        <i class="fa-solid fa-arrow-down"></i>
+                        <i class="bi bi-currency-rupee"></i>
+                        6,500
+                    </td>
+                </tr>
+                <tr class="card-body">
+                    <td>AJEET SINGH</td>
+                    <td>Students</td>
+                    <td>7464929646</td>
+                    <td>Customer</td>
+                    <td>
+                        <i class="fa-solid fa-arrow-down"></i>
+                        <i class="bi bi-currency-rupee"></i>
+                        6,500
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+
+
+    </div>
+
+
+</body>
+
+</html>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vquery/5.0.1/v.min.js"></script>
+<script defer src="activePage.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.js"></script> -->
+
+<script>
+
+    // ===========================ACTIVE-LINKS(MAIN-LINKS)=============================
+
+    let mainLinks = document.querySelectorAll('.main_link');
+
+    mainLinks.forEach(mainLink => {
+        mainLink.addEventListener('click', function () {
+            document.querySelector('.active')?.classList.remove('active');
+            mainLink.classList.add('active');
+        });
+    });
+
+    let activePage = window.location.pathname;
+    let asideLinks = document.querySelectorAll('.main_link');
+
+    asideLinks.forEach(link => {
+        if (link.href.includes(`${activePage}`)) {
+            link.classList.add('active');
+        };
+    });
+
+    // ===========================CARD=============================
+
+    $(document).on('click', '.referral_close', function () {
+        $('.referrals').fadeOut();
+    });
+
+
+
+    let a = document.querySelectorAll(".card-body")
+    a.forEach((e) => {
+        e.addEventListener("click", function () {
+            window.location.assign('party-profile.html');
+        })
+    })
+
+
+</script>
